@@ -24,7 +24,7 @@ Leadership:
 - Pastors: Tim and Melissa Faircloth
 
 Service Times:
-- Sunday: 10:00 AM
+- Sunday: 10:00 AM and 6:00 PM
 - Wednesday: 6:00 PM
 
 Online Resources:
