@@ -42,6 +42,10 @@ When answering:
 def index():
     return render_template("index.html")
 
+@app.route("/embed")
+def embed():
+    return render_template("embed.html")
+
 @app.route("/chat", methods=["POST"])
 def chat():
     user_message = request.json.get("message", "")
