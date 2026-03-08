@@ -24,8 +24,10 @@ Leadership:
 - Pastors: Tim and Melissa Faircloth
 
 Service Times:
-- Sunday: 10:00 AM and 6:00 PM
-- Wednesday: 6:00 PM
+- Sunday Morning Service: 10:00 AM
+- Sunday Evening Service: 6:30 PM
+- Monday Intercessory Prayer: 6:00 PM
+- Wednesday Bible Study & Prayer: 6:30 PM
 
 Online Resources:
 - Media: Watch sermons and messages online at newbeginningworshipcenter.org
