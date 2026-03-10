@@ -3,51 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBWC Assistant</title>
+    <title>Tiny Tech Assistant</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { height: 100%; overflow: hidden; font-family: 'Lato', Arial, sans-serif; background: #f9f5f0; }
+        html, body { height: 100%; overflow: hidden; font-family: 'Lato', Arial, sans-serif; background: #0a3d4a; }
         .chat-wrap { display: flex; flex-direction: column; height: 100vh; }
-        .chat-header { background: #7b2d3e; color: white; padding: 14px 20px; text-align: center; }
+        .chat-header { background: #0a3d4a; color: #39ff14; padding: 14px 20px; text-align: center; border-bottom: 2px solid #39ff14; }
         .chat-header h2 { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
-        .chat-header p { font-size: 13px; opacity: 0.85; margin-top: 2px; }
-        .chat-messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; background: #f9f5f0; }
-        .message { max-width: 80%; padding: 12px 16px; border-radius: 16px; font-size: 20px; line-height: 1.6; }
-        .bot { background: white; color: #333; align-self: flex-start; border: 1px solid #e8e0d8; border-bottom-left-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-        .user { background: #7b2d3e; color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
-        .quick-replies { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 16px; background: #f9f5f0; }
-        .quick-btn { background: white; color: #7b2d3e; border: 1px solid #7b2d3e; border-radius: 20px; padding: 6px 14px; font-size: 14px; font-family: 'Lato', Arial, sans-serif; cursor: pointer; font-weight: 600; }
-        .quick-btn:hover { background: #7b2d3e; color: white; }
-        .chat-input { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid #e8e0d8; background: white; }
-        .chat-input input { flex: 1; padding: 10px 16px; border: 1px solid #ddd; border-radius: 24px; font-size: 20px; outline: none; font-family: 'Lato', Arial, sans-serif; background: #f9f5f0; }
-        .chat-input input:focus { border-color: #7b2d3e; }
-        .chat-input button { background: #7b2d3e; color: white; border: none; border-radius: 24px; padding: 10px 22px; font-size: 20px; font-weight: 700; cursor: pointer; font-family: 'Lato', Arial, sans-serif; }
-        .chat-input button:hover { background: #9b3a50; }
-        .chat-footer { text-align: center; padding: 6px; font-size: 11px; color: #aaa; background: white; border-top: 1px solid #f0ebe4; }
-        .chat-footer a { color: #aaa; text-decoration: none; }
+        .chat-header p { font-size: 13px; opacity: 0.85; margin-top: 2px; color: white; }
+        .chat-messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; background: #0d2b33; }
+        .message { max-width: 80%; padding: 12px 16px; border-radius: 16px; font-size: 16px; line-height: 1.6; }
+        .bot { background: #0a3d4a; color: white; align-self: flex-start; border: 1px solid #39ff14; border-bottom-left-radius: 4px; }
+        .user { background: #39ff14; color: #0a3d4a; align-self: flex-end; border-bottom-right-radius: 4px; font-weight: 600; }
+        .quick-replies { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 16px; background: #0d2b33; }
+        .quick-btn { background: transparent; color: #39ff14; border: 1px solid #39ff14; border-radius: 20px; padding: 6px 14px; font-size: 13px; font-family: 'Lato', Arial, sans-serif; cursor: pointer; font-weight: 600; }
+        .quick-btn:hover { background: #39ff14; color: #0a3d4a; }
+        .chat-input { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid #39ff14; background: #0a3d4a; }
+        .chat-input input { flex: 1; padding: 10px 16px; border: 1px solid #39ff14; border-radius: 24px; font-size: 16px; outline: none; font-family: 'Lato', Arial, sans-serif; background: #0d2b33; color: white; }
+        .chat-input input::placeholder { color: #aaa; }
+        .chat-input input:focus { border-color: #39ff14; }
+        .chat-input button { background: #39ff14; color: #0a3d4a; border: none; border-radius: 24px; padding: 10px 22px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: 'Lato', Arial, sans-serif; }
+        .chat-input button:hover { background: #2dd10f; }
+        .chat-footer { text-align: center; padding: 6px; font-size: 11px; color: #aaa; background: #0a3d4a; border-top: 1px solid #1a4d5a; }
     </style>
 </head>
 <body>
 <div class="chat-wrap">
     <div class="chat-header">
-        <h2>✝ New Beginnings Worship Center</h2>
-        <p>Ask me anything about NBWC</p>
+        <h2>Tiny Tech LLC</h2>
+        <p>Small Name, Big Solutions</p>
     </div>
     <div class="chat-messages" id="messages">
-        <div class="message bot">Hi! I'm the NBWC assistant. How can I help you today?</div>
+        <div class="message bot">Hi! I'm the Tiny Tech assistant. How can I help you today?</div>
     </div>
     <div class="quick-replies">
-        <button class="quick-btn" onclick="quickSend('What are the service times?')">Service Times</button>
-        <button class="quick-btn" onclick="quickSend('Where is the church located?')">Location</button>
-        <button class="quick-btn" onclick="quickSend('How do I contact the church?')">Contact Us</button>
-        <button class="quick-btn" onclick="quickSend('What can I expect on my first visit?')">First Visit</button>
+        <button class="quick-btn" onclick="quickSend('What services do you offer?')">Services</button>
+        <button class="quick-btn" onclick="quickSend('How do I contact Tiny Tech?')">Contact</button>
+        <button class="quick-btn" onclick="quickSend('What areas do you service?')">Service Area</button>
+        <button class="quick-btn" onclick="quickSend('How do I get a free estimate?')">Free Estimate</button>
     </div>
     <div class="chat-input">
         <input type="text" id="userInput" placeholder="Type your question..." />
         <button id="sendBtn">Send</button>
     </div>
-    <div class="chat-footer">Powered by <a href="#">Tiny Tech LLC</a></div>
+    <div class="chat-footer">Powered by Tiny Tech LLC</div>
 </div>
 <script>
     var input = document.getElementById('userInput');
