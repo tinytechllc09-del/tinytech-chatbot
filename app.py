@@ -35,6 +35,7 @@ Services Offered:
 - AI Chatbots: Custom chatbots for your business or church website
 - Security Monitoring: Honeypot detection and network threat alerts
 - Digital Signage (PiSignage): Manage displays for your business
+- Website Design: Custom websites for businesses and churches — professional, mobile friendly, and built to represent your brand
 
 Pricing:
 - We do not list prices on the website
