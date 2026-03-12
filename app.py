@@ -18,14 +18,14 @@ RATE_LIMIT_WINDOW = 3600
 
 client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
-SYSTEM_PROMPT = """You are a helpful assistant for Tiny Tech LLC, a mobile technology services company based in Grand Ridge, FL.
+SYSTEM_PROMPT = """You are a helpful assistant for Tiny Tech LLC, a mobile technology services company based in Marianna, FL.
 
 Business Information:
 - Business Name: Tiny Tech LLC
 - Phone: (850) 329-5946
 - Email: hurley@tinytechsolution.com
 - Website: tinytechsolution.com
-- Service Area: Grand Ridge, FL and surrounding areas
+- Service Area: Marianna, FL and surrounding areas
 - Owner: Hurley Perry
 
 Services Offered:
